@@ -12,7 +12,8 @@ colors = {
     'BOLD' : '\033[1m',
     'UNDERLINE' : '\033[4m',
     'BROWN' : '\033[33m',
-    'DBLUE' : '\033[34m'
+    'DBLUE' : '\033[34m',
+    'BG_CYAN' : '\033[106m',
 }
 
 file = open('tiles.yml', 'r')
@@ -39,6 +40,6 @@ def printmap(map):
     
 
 
-file = open('maps/map1.json', 'r')
-map = json.load(file)
-printmap(map)
+#file = open('maps/map1.json', 'r')
+#map = json.load(file)
+#printmap(map)

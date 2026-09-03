@@ -6,12 +6,37 @@ tiles:
   - id: 1
     name: Water
     tile: '~'
-    color: BLUE
+    color: DBLUE
   - id: 2
     name: Grass
-    tile: ','
+    tile: ';'
     color: GREEN
   - id: 3
     name: Mountain
     tile: '^'
+    color: BROWN
+  - id: 4
+    name: Shallow
+    tile: '~'
+    color: CYAN
+  - id: 5
+    name: Summit
+    tile: '^'
     color: END
+  - id: 6
+    name: Sand
+    tile: '.'
+    color: YELLOW
+  - id: 7
+    name: Snow
+    tile: ';'
+    color: END
+  - id: 8
+    name: Desert
+    tile: '.'
+    color: YELLOW
+  - id: 9
+    name: Frozen Water
+    tile: '~'
+    color: BG_CYAN
+
