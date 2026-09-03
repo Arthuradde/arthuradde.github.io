@@ -10,7 +10,9 @@ colors = {
     'PINK' : '\033[95m',
     'END' : '\033[0m',
     'BOLD' : '\033[1m',
-    'UNDERLINE' : '\033[4m'
+    'UNDERLINE' : '\033[4m',
+    'BROWN' : '\033[33m',
+    'DBLUE' : '\033[34m'
 }
 
 file = open('tiles.yml', 'r')
