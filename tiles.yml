@@ -1,0 +1,17 @@
+tiles:
+  - id: 0
+    name: empty
+    tile: ' '
+    color: END
+  - id: 1
+    name: Water
+    tile: '~'
+    color: BLUE
+  - id: 2
+    name: Grass
+    tile: ','
+    color: GREEN
+  - id: 3
+    name: Mountain
+    tile: '^'
+    color: END
