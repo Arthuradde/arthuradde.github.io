@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Carto</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(function() {
+          $('#getmap').click(function(e) {
+              e.preventDefault();
+              $('#res').html("Processing...");
+              $.getJSON('/getmap', function(data) {
+                  $('#res').html(data.map_string);
+                  console.log(data); // Outputs: Executed Successfully
+              });
+          });
+      });
+    </script>
+
+  </head>
+
+  <body style="background-color:#1a2125;">
+  <button id="getmap">Map Gen</button>
+
+  <div>
+    <code id="res">
+    </code>
+  </div>
+
+  </body>
+</html>
+

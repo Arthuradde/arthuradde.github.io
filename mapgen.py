@@ -85,8 +85,11 @@ def gen_test():
     tilemap2 = f(tilemap)
     newmap = {"name":"test","tiles":tilemap2}
     
-    # Print map
-    view.printmap(newmap)
+    return newmap
     
     
-gen_test()
+    
+    
+newmap = gen_test()
+#view.printmap(newmap)
+print(view.maptostring(newmap))

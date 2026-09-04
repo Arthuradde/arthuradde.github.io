@@ -18,25 +18,26 @@ tiles:
   - id: 4
     name: Shallow
     tile: '~'
-    color: CYAN
+    color: BLUE
   - id: 5
     name: Summit
     tile: '^'
-    color: END
-  - id: 6
-    name: Sand
-    tile: '.'
-    color: YELLOW
+    color: WHITE
+  #- id: 6
+  #  name: Sand
+  #  tile: '.'
+  #  color: YELLOW
   - id: 7
     name: Snow
     tile: ';'
-    color: END
+    color: WHITE
   - id: 8
     name: Desert
     tile: '.'
     color: YELLOW
   - id: 9
     name: Frozen Water
+    #tile: '░'
     tile: '~'
-    color: BG_CYAN
+    color: CYAN
 
