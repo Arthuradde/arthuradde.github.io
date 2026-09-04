@@ -92,11 +92,3 @@ def maptohtml(map):
         
     return map_string
     
-
-#file = open('maps/map1.json', 'r')
-#map = json.load(file)
-
-#printmap(map)
-
-#strmap = maptostring(map)
-#print(strmap)

@@ -1,0 +1,40 @@
+.container {
+  padding: 20px 10px;
+  font: 1.2em sans-serif;
+  display: flex;
+}
+
+.container > * {
+  padding: 10px;
+  border-width: 0px 2px;
+  border-style: solid;
+  border-color: rgb(95 97 110);
+  border-radius: 0.5em;
+
+  margin: 0 10px;
+  flex: 1;
+}
+
+form {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.divcol label,
+.divcol input {
+/* In order to define widths */
+display: inline-block;
+}
+
+.divcol label {
+width: 30%;
+/* Positions the label text beside the input */
+text-align: right;
+}
+
+.divcol label+input {
+width: 30%;
+/* Large margin-right to force the next element to the new-line
+            and margin-left to create a gutter between the label and input */
+margin: 0 30% 0 4%;
+}

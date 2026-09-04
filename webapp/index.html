@@ -3,30 +3,94 @@
 
   <head>
     <title>Carto</title>
-
+    <link rel="stylesheet" href="webapp/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script type="text/javascript">
       $(function() {
-          $('#getmap').click(function(e) {
-              e.preventDefault();
-              $('#res').html("Processing...");
-              $.getJSON('/getmap', function(data) {
-                  $('#res').html(data.map_string);
-                  console.log(data); // Outputs: Executed Successfully
-              });
+      
+          $("#randseed").click(function(){
+            $("#seed").val(Math.floor(Math.random() * 9999999) + 1);
+            $("#getmap").submit();
           });
+
+          $(".onchange").change(function(){
+            $("#getmap").submit();
+          });
+
+          $("#getmap").submit(function(e) {
+              e.preventDefault();
+
+              $('#res').html("Processing...");
+              
+              var form = $(this);
+
+              $.ajax({
+                type: "POST",
+                url: '/getmap',
+                data: form.serialize(), // Serialize form data
+                success: function (data) {
+                    $('#res').html(data.map_string);
+                },
+                error: function (data) {
+                    alert("Error occurred while submitting the form");
+                }
+              });
+
+              //$.getJSON('/getmap', function(data) {
+              //    $('#res').html(data.map_string);
+              //    console.log(data); // Outputs: Executed Successfully
+              //});
+          });
+          $("#randseed").click();
       });
     </script>
 
   </head>
+  <body style="background-color:#1a2125;line-height: 13px;color:white;">
 
-  <body style="background-color:#1a2125;">
-  <button id="getmap">Map Gen</button>
+  <form id="getmap">
+    <div class="container">
 
-  <div>
-    <code id="res">
-    </code>
-  </div>
+      <div class="divcol">
+        <label for="width">Width:</label>
+        <input type="text" id="width" name="width" class="onchange" value=60><br><br>
+        <label for="height">Height:</label>
+        <input type="text" id="height" name="height" class="onchange" value=60><br><br>
+        <label for="size">Size:</label>
+        <input type="text" id="size" name="size" class="onchange" value=5><br><br>
+      </div>
+
+      <div class="divcol middle">
+        <label for="sea_lvl">Water level:</label>
+        <input id="sea_lvl" name="sea_lvl" type="range" class="onchange" min="15" max="100" value="60"><br><br>
+        <label for="mountain_lvl">Mountain level:</label>
+        <input id="mountain_lvl" name="mountain_lvl" type="range" class="onchange" min="1" max="100" value="72.5"><br><br>
+        <label for="summit_lvl">Summit level:</label>
+        <input id="summit_lvl" name="summit_lvl" type="range" class="onchange" min="1" max="100" value="90"><br><br>
+      </div>
+
+      <div class="divcol">
+        <label for="climate_size">Climate Variance:</label>
+        <input type="text" id="climate_size" name="climate_size" class="onchange" value=10><br><br>
+        <label for="cold_lvl">Snow level:</label>
+        <input id="cold_lvl" name="cold_lvl" type="range" class="onchange" min="1" max="100" value="25"><br><br>
+        <label for="hot_lvl">Desert level:</label>
+        <input id="hot_lvl" name="hot_lvl" type="range" class="onchange" min="1" max="100" value="75"><br><br>
+        <label for="freeze_lvl">Freezing temperature:</label>
+        <input id="freeze_lvl" name="freeze_lvl" type="range" class="onchange" min="1" max="100" value="15"><br><br>
+      </div>
+
+    </div>
+    <label for="seed">Seed:</label> <input type="text" id="seed" name="seed" class="onchange" value=12345> <input type="button" id="randseed" value="Randomize"><br>
+    <input type="submit" value="Gen Map" hidden>
+  </form>
+
+    <!--<button id="getmap">Map Gen</button>-->
+
+    <div>
+      <code id="res">
+      </code>
+    </div>
 
   </body>
 </html>
