@@ -9,7 +9,7 @@
       $(function() {
       
           $("#randseed").click(function(){
-            $("#seed").val(Math.floor(Math.random() * 9999999) + 1);
+            $("#seed").val(Math.floor(Math.random() * 2147483647) + 1);
             $("#getmap").submit();
           });
 
@@ -53,11 +53,11 @@
 
       <div class="divcol">
         <label for="width">Width:</label>
-        <input type="text" id="width" name="width" class="onchange" value=60><br><br>
+        <input type="text" id="width" name="width" class="onchange" value=120><br><br>
         <label for="height">Height:</label>
-        <input type="text" id="height" name="height" class="onchange" value=60><br><br>
+        <input type="text" id="height" name="height" class="onchange" value=120><br><br>
         <label for="size">Size:</label>
-        <input type="text" id="size" name="size" class="onchange" value=5><br><br>
+        <input type="text" id="size" name="size" class="onchange" value=15><br><br>
       </div>
 
       <div class="divcol middle">

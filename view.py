@@ -15,6 +15,8 @@ colors = {
     'BROWN' : '\033[33m',
     'DBLUE' : '\033[34m',
     'BG_CYAN' : '\033[106m',
+    'BEIGE' : '\033[33m',
+    'DGREEN' : '\033[32m'
 }
 
 html_colors = {
@@ -31,6 +33,8 @@ html_colors = {
     'BROWN' : '#7B3F00',
     'DBLUE' : 'darkBlue',
     'BG_CYAN' : '\033[106m',
+    'BEIGE' : 'BurlyWood',
+    'DGREEN' : 'DarkGreen'
 }
 
 file = open('tiles.yml', 'r')

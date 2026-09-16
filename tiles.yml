@@ -1,7 +1,7 @@
 tiles:
   - id: 0
     name: empty
-    tile: ' '
+    tile: '░'
     color: END
   - id: 1
     name: Water
@@ -21,7 +21,7 @@ tiles:
     color: BLUE
   - id: 5
     name: Summit
-    tile: '^'
+    tile: '▲'
     color: WHITE
   #- id: 6
   #  name: Sand
@@ -40,4 +40,59 @@ tiles:
     #tile: '░'
     tile: '~'
     color: CYAN
-
+  - id: 10
+    name: Tree1
+    tile: '♠'
+    color: GREEN
+  - id: 11
+    name: Tree2
+    tile: '♣'
+    color: GREEN
+  - id: 13
+    name: TreeSnow
+    tile: '↑'
+    color: DGREEN
+  - id: 14
+    name: TreeDesert
+    tile: '↑'
+    color: BEIGE
+  - id: 20
+    name: Source
+    tile: '☼'
+    color: CYAN
+  - id: 21
+    name: River NS
+    tile: '|'
+    color: CYAN
+  - id: 22
+    name: River EW
+    tile: '─'
+    color: CYAN
+  - id: 23
+    name: River Sl
+    tile: '/'
+    color: CYAN
+  - id: 24
+    name: River B-Sl
+    tile: '\'
+    color: CYAN
+  - id: 25
+    name: River NE
+    tile: '└'
+    color: CYAN
+  - id: 26
+    name: River SE
+    tile: '┌'
+    color: CYAN
+  - id: 27
+    name: River SW
+    tile: '┐'
+    color: CYAN
+  - id: 28
+    name: River NW
+    tile: '┘'
+    color: CYAN
+  - id: 29
+    name: Lake
+    tile: '~'
+    color: CYAN
